@@ -1,4 +1,4 @@
-# react-output-first
+# react-output-context
 Reactアウトプットサンプル
 
 useState, Propsのみの状態管理でTodoリストの基本的な機能を構築
