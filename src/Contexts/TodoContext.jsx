@@ -7,6 +7,7 @@ import { useTodo } from "../hooks/useTodo";
 const TodoContext = createContext({});
 
 // children: https://choippo.com/react-component-children/
+// useTodoからstateとpropsを取り出す
 export const TodoProvider = ({ children }) => {
   const {
     searchKeyword,
@@ -18,6 +19,7 @@ export const TodoProvider = ({ children }) => {
     handleChangeSearchKeyword,
   } = useTodo();
 
+  // Context.Provider で配下コンポーネントにContextを提供する
   return (
     <TodoContext.Provider
       value={{
