@@ -58,7 +58,7 @@ export const useTodo = () => {
 
   // 削除処理
   const handleDeleteTodo = (targetId, targetTitle) => {
-    // 「OK」時の処理開始 ＋ 確認ダイアログの表示
+    // 「OK」時の処理 ＋ 確認ダイアログの表示
     if (window.confirm(`「${targetTitle}」のtodoを削除しますか？`)) {
       const newTodoList = originTodoList.filter((todo) => todo.id !== targetId);
 
@@ -69,18 +69,13 @@ export const useTodo = () => {
   // 検索処理
   const handleChangeSearchKeyword = (e) => setSearchKeyword(e.target.value);
 
-  const states = {
+  return {
     searchKeyword,
     addInputValue,
     showTodoList,
-  };
-
-  const actions = {
     onChangeAddInputValue,
     handleAddTodo,
     handleDeleteTodo,
     handleChangeSearchKeyword,
   };
-
-  return [states, actions];
 };
